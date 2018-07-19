@@ -1,2 +1,2 @@
-# Magic-Eight-Ball
+# JavaScript
 Learning JavaScript
