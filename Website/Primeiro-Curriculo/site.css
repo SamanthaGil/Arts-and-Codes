@@ -1,0 +1,31 @@
+body {
+	font-family: "Times New Roman";
+	background-color: #F2F2FC;
+}
+
+h2 { 
+	font-size: 25px;
+	text-align: center;
+	color: white;
+}
+
+div {
+	background-color: #851944;
+}
+
+h3 {
+    font-family: "Crimson";
+    font-size: 45px;
+	color: white;
+	text-align: center;
+}
+
+p {
+    text-align: justify;
+    font-family: "Times New Roman";
+}
+
+ul {
+    text-align: justify;
+    font-family: "Times New Roman";
+}
