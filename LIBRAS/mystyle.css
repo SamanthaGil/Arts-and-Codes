@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1{
+   font-size: 24px;
+   color: black;
+   font-weight: 500;
+   text-align: center;
+}
+
+
+/* Estilizando as duas partes do corpo: */
+.navbar{
+    margin: 0; 
+    padding: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on front */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color:#fc8b2f ;
+    
+}
+
+.site{
+    padding-top: 5%;
+    position: relative;
+}
+
+/* Estilizando a navbar */
+sidenav {
+    position: relative;
+    float: left;
+    background-color: #474A46;
+}
+
+.sidenav a {
+	text-decoration: none;
+	color: #fff;
+	padding: 15px;
+    text-shadow: 0px 2px 5px rgb(192, 77, 0);
+}
+
+
+.sidenav a:hover {
+    background-color: rgb(255, 122, 45);
+}
+
+p {
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    text-indent: 2%;
+}
