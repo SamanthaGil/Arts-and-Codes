@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+body{
+    background-color: white; /* Fundo branco para o site */
+    color: rgba(0, 0, 0, 1); /* Cor preto para a fonte do site todo */
+}
+
+p {
+    text-align: justify; /* Alinhamento justificado para os paragrafos */
+    text-indent: 50px; /* Adicionando paragrafos */
+}
+
+/***************************************/
+/* Formatação de imagens com legendas */
+figure.foto-legenda{
+    position: relative; /* A posição relativa determina que o elemento deve ficar exatamente onde está no codigo */
+    border: 8px solid white; /* Colocando porta na figura, especificamente na foto-legenda */
+    box-shadow: 1px 1px 4px black; /* Colocando sombra na figura */
+}
+
+figure.foto-legenda img{
+    width: 100%; /* Aqui, determino que a tag img deve cobrir 100% de width e height da caixa pai figure */
+    height: 100%;
+}
+
+figure.foto-legenda figcaption{
+    opacity: 0; /* a tag figcaption não terá visibilidade */
+    position: absolute; /* Posição absoluta para a tag figcaption dentro da tag figure */
+    top: 0; /* Estou determinando que a figcaption deve ficar no inicio da caixa de tag figure */
+    background-color: rgba(0, 0, 0, .4); /* Cor de fundo preta para a legenda, com alpha 40% */
+    color: white; /* Cor branca para as letras */
+    width: 100%; /* Estou determinando que o fundo deve cobrir 100% da tag pai figure */
+    height: 100%; 
+    padding: 10px; /* Estou colocando uma borda interna invisivel na legenda, para que a legenda não comece grudada na borda */
+    box-sizing: border-box; /* Quando eu utilizo o padding, a legenda se desloca e fica fora da tag pai figure. Para evitar isso, estou delimitando que o tamanho da caixa deve respeirar a caixa da tag pai figure */
+}
+
+figure.foto-legenda:hover figcaption{
+    opacity: 1; /* a tag figcaption terá visibilidade quando eu passar o mouse */
+    transition: opacity 1s; /* Esse comando permite que ocorra uma transição da opacidade 0 para opacidade 1 no periodo de 1s */
+}
+
+/***************************************/
+/* Formatação do menu */
+nav#menu {
+    display: block;
+}
+
+nav#menu ul{
+    list-style: none; /* Removendo as bolinhas da lista */
+    text-transform: uppercase; /* Colocando tudo em letras maiúsculas */
+    position: absolute;
+    top: -20px;
+    left: 300px;
+}
+
+nav#menu li{
+    display: inline-block; /* Exibindo um bloco numa mesma linha */
+    background-color: #dddddd;
+    padding: 10px;
+}
+
+nav#menu li:hover{
+    background-color: #606060;
+}
+
+nav#menu h1{ /* Aqui eu estou ocultando o título "Menu principal" visualmente, mas os mecanismos de busca ainda podem achá-lo */
+    display: none;
+}
