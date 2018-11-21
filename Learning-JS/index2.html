@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>JavaScript</title>
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+        <script>
+            var broke = false;
+            function changeLight(a){
+                if (!broke){
+                    document.getElementById("theLight").src="_images/" + a + ".jpg";
+                    if(a=='lampada-quebrada'){
+                        broke = true;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Turn on the Light</h1>
+        <img id="theLight" src="_images/lampada-apagada.jpg" onmousemove="changeLight('lampada-acesa')" onmouseout="changeLight('lampada-apagada')" onmousedown="changeLight('lampada-quebrada')"/>
+    </body>
+</html>

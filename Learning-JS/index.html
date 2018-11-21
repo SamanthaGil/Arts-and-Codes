@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>JavaScript</title>
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+        <script>
+            function turnOn(){
+                document.getElementById("theLight").src="_images/lampada-acesa.jpg";
+            }
+
+            function turnOff(){
+                document.getElementById("theLight").src="_images/lampada-apagada.jpg";
+            }
+
+            function breakTheLight(){
+                document.getElementById("theLight").src="_images/lampada-quebrada.jpg";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Turn on the Light</h1>
+        <img id="theLight" src="_images/lampada-apagada.jpg" onmousemove="turnOn()" onmouseout="turnOff()" onmousedown="breakTheLight()"/>
+    </body>
+</html>
