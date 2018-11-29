@@ -1,69 +1,254 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* To use latin symbols */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web'); /* Downloading the Titillium Font from Google Repository  */
+@font-face{
+    font-family:'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+} /* Downloading the Bubblegum font from _fonts folder */
 
+/*------------------------- Body ----------------------------------*/
 body{
-    background-color: white; /* Fundo branco para o site */
-    color: rgba(0, 0, 0, 1); /* Cor preto para a fonte do site todo */
+    font-family: Arial, sans-serif;
+    background-color: white; /* White background for website */
+    color: rgba(0, 0, 0, 1); /* Black color for all the texts */
+}
+
+div#interface{
+    width: 900px;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px grey;
+    padding: 10px;
 }
 
 p {
-    text-align: justify; /* Alinhamento justificado para os paragrafos */
-    text-indent: 50px; /* Adicionando paragrafos */
+    text-align: justify; /* Justify align for all paragraph */
+    text-indent: 50px; /* Add paragraph, a space of 50px width in the start of paragraph */
 }
 
-/***************************************/
-/* Formatação de imagens com legendas */
+a{
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/*--------------------------- Header ------------------------------*/
+header#cabecalho img#icone{
+    position: absolute;
+    left: 950px;
+    top: 70px;
+}
+
+header#cabecalho{
+    border-bottom: 1px grey solid;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30px;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgb(0,0,0,0.5);
+    padding: 0px;
+    margin-bottom: 1px;
+}
+
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+/*----------------- Images with caption --------------------*/
 figure.foto-legenda{
-    position: relative; /* A posição relativa determina que o elemento deve ficar exatamente onde está no codigo */
-    border: 8px solid white; /* Colocando porta na figura, especificamente na foto-legenda */
-    box-shadow: 1px 1px 4px black; /* Colocando sombra na figura */
+    position: relative; /* The relative position say that the element has to be exactly where is in the code */
+    border: 8px solid white; /* Putting a border in the figure */
+    box-shadow: 1px 1px 4px black; /* Putting a shadow in the figure */
 }
 
 figure.foto-legenda img{
-    width: 100%; /* Aqui, determino que a tag img deve cobrir 100% de width e height da caixa pai figure */
+    width: 100%; /* Here the tag img has 100% width and height like the father */
     height: 100%;
 }
 
 figure.foto-legenda figcaption{
-    opacity: 0; /* a tag figcaption não terá visibilidade */
-    position: absolute; /* Posição absoluta para a tag figcaption dentro da tag figure */
-    top: 0; /* Estou determinando que a figcaption deve ficar no inicio da caixa de tag figure */
-    background-color: rgba(0, 0, 0, .4); /* Cor de fundo preta para a legenda, com alpha 40% */
-    color: white; /* Cor branca para as letras */
-    width: 100%; /* Estou determinando que o fundo deve cobrir 100% da tag pai figure */
+    opacity: 0; /* Invisible caption */
+    position: absolute; /* Absolute position to figcaption tag inside the figure tag */
+    top: 0; /* The figcaption has to be in the start of figure tag */
+    background-color: rgba(0, 0, 0, .4); /* Black background for caption, with 40% alpha */
+    color: white; /* White letters */
+    width: 100%; /* The background size is 100% of father tag */
     height: 100%; 
-    padding: 10px; /* Estou colocando uma borda interna invisivel na legenda, para que a legenda não comece grudada na borda */
-    box-sizing: border-box; /* Quando eu utilizo o padding, a legenda se desloca e fica fora da tag pai figure. Para evitar isso, estou delimitando que o tamanho da caixa deve respeirar a caixa da tag pai figure */
+    padding: 10px; /* An invisible border inside the figcaption because I don't want the caption really near to border. */
+    box-sizing: border-box; /* When you use the padding command, the caption suddenly go outside the father tag figure. To avoid it, we delimit the box size in respect to the father tag. */
 }
 
 figure.foto-legenda:hover figcaption{
-    opacity: 1; /* a tag figcaption terá visibilidade quando eu passar o mouse */
-    transition: opacity 1s; /* Esse comando permite que ocorra uma transição da opacidade 0 para opacidade 1 no periodo de 1s */
+    opacity: 1; /* The caption will appear when I put the mouse on */
+    transition: opacity 1s; /* This command allow the transition between opacity 0 and 1 in a period of 1s */
 }
 
-/***************************************/
-/* Formatação do menu */
+/*------------------- Menu -----------------------------*/
 nav#menu {
     display: block;
 }
 
 nav#menu ul{
-    list-style: none; /* Removendo as bolinhas da lista */
-    text-transform: uppercase; /* Colocando tudo em letras maiúsculas */
-    position: absolute;
+    list-style: none; /* Deleting the bullets */
+    text-transform: uppercase; /* All the words in uppercase */
+    position: absolute; /* We need a menu outside the div */
     top: -20px;
-    left: 300px;
+    left: 450px;
 }
 
 nav#menu li{
-    display: inline-block; /* Exibindo um bloco numa mesma linha */
+    display: inline-block; /* Showing the block in the same line */
     background-color: #dddddd;
     padding: 10px;
+    margin: 2px;
+    -webkit-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
 }
 
 nav#menu li:hover{
-    background-color: #606060;
+    background-color: beige;
 }
 
-nav#menu h1{ /* Aqui eu estou ocultando o título "Menu principal" visualmente, mas os mecanismos de busca ainda podem achá-lo */
+nav#menu a{
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu h1{ /* I put a hidden title, we cannot see but the mecanism of search still can find it */
     display: none;
+}
+
+/*--------------------- Main content ------------------------*/
+section#corpo{
+    display: block;
+    width: 500px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 25px;
+}
+
+article#noticia-principal h2{
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.direita{
+    text-align: right;
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+header#cabecalho-artigo h3{
+    font-size: 12pt;
+    color: #606060;
+}
+
+/* Table from content */
+table#tabelaspec{
+    border: 1px solid #606060;  
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td{
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: right;
+}
+
+table#tabelaspec td.ce{
+    color: white;
+    background-color: #606060;
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec td.cd{
+    background-color: #cecece;
+    text-align: left;
+}
+
+table#tabelaspec caption{
+    color: #888888;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span{
+    display: block;
+    float: right;
+    font-size: 8pt;
+    margin-top: 8px;
+}
+
+/* The right content */
+aside#lateral{
+    display: block;
+    width: 350px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5); 
+}
+
+aside#lateral h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060; 
+    margin-top: 0px;
+}
+
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 12pt;
+    color: #ffffff;
+    padding: 5px;
+}
+/*--------------------- Footer -----------------------*/
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p{
+    text-align: center;
+}
+
+footer#rodape a{
+    text-decoration: none;
+    color: black;
+    transition: font-size 1s;
+}
+
+footer#rodape a:hover{
+    font-size: 20px;
 }

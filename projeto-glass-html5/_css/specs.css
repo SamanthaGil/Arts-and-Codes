@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+}
+
+/*#imagens-spec{
+    float: left;
+}*/
+
+iframe#frame-spec{
+    /*float: right;*/
+    width: 410px;
+    height: 280px;
+    border: none;
+    overflow: auto;
+    overflow-x: auto ;
+    -ms-scrollbar: none;
+    -moz-scrollbar: none; 
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    background-color: transparent;
+    display: none;
+}
+
+
+
