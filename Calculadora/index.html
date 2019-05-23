@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- lang serve para ajudar os filtros dos mecanismos de busca -->
+<head>
+    <!-- charset = conjunto de caracteres. Se não colocar, o HTML utilizará o padrão ANSI, que é americano e não possui símbolos latinos. Precisamos usar o UTF-8 para evitar problemas de pontuação -->
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- tornar o site responsivo -->
+    <title>Calculator</title> <!-- Título que aparecerá na aba do navegador-->
+    <link rel="stylesheet" href="_css/estilo.css">
+</head>
+<body>
+    <!-- <div> é uma divisória, uma delimitação para o site -->
+    <div id="interface"> 
+        <header id="cabecalho"> <!-- O header permite que eu separe, semânticamente, os elementos do cabeçalho do corpo -->
+
+            <hgroup> <!-- Como o título h1 e h2 abaixo são títulos que condizem ao mesmo assunto, vamos agrupá-los por meio do hgroup, lembrando que visualmente não vai fazer diferença nenhuma, a diferença é semântica. O significado para o seu HTML é muito importante -->
+                <h1> Calculator </h1>
+                <h2> Calculadora implementada por meio de HTML, CSS e JS </h2>
+            </hgroup>
+        </header>
+
+        <div id="corpo">
+            <div class="calculadora">
+                <div class="display">0</div>
+
+                <div class="botoes">
+                    <button data-acao = "apaga" class="operador"> C </button>
+                    <button data-acao = "porcentagem" class="operador"> % </button>
+                    <button data-acao = "raiz" class="operador"> &radic; </button>
+                    <button data-acao = "divisao" class="operador"> / </button><br />
+
+                    <button>8</button>
+                    <button>9</button> 
+                    <button>7</button>
+                    <button data-acao = "mult" class="operador"> &times; </button><br/>
+                    
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button data-acao = "sub" class="operador"> - </button><br/>
+
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button data-acao = "adicao" class="operador"> + </button><br />
+
+                    <button data-acao = "exponencial" class="operador">exp</button>
+                    <button>0</button>
+                    <button data-acao = "virgula"> , </button>
+                    <button data-acao = "resultado" class="igual"> = </button><br />
+                </div>
+            
+            </div>
+        </div>
+        
+        <footer>
+            <p> Samantha Gil 2019 </br>
+            <a href="readme.pdf" target="blank"> Como usar?</a> | 
+            <a href="https://github.com/SamanthaGil/" target="blank"> github </a> | <a href="https://www.linkedin.com/in/samanthagil/" target="blank">linkedin</a></br>    </p>
+        </footer>
+    </div>
+
+    <script src="_js/codigo.js"></script>
+</body>
+</html>

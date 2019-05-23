@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    background-color: rgba(0,0,0,0.05);
+}
+
+#corpo, header{
+    width: 400px;
+    margin: auto;
+}
+
+.display{
+    padding-top: 20px;
+    font-size: 20pt;
+    width: 100%;
+    margin-bottom: 2px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    border: 1px solid gray;
+    height: 50px;
+}
+
+button {
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 20pt;
+    height: 70px;
+    width: 24%;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+button:not(.display):hover{
+    box-shadow: 1px 1px 3px 1px rgba(173, 162, 162, 0.5);
+}
+
+.clicado { 
+    box-shadow: 2px 2px 3px 1px rgba(173, 162, 162, 1);
+}
+
+h2 {
+    color: crimson;
+    padding: 0 10px 0 10px;
+}
+
+.operador{
+    background-color: rgba(0,0,0,0.05);
+}
+
+.igual{
+    background-color: rgba(280,200,60 ,0.5 );
+}
